@@ -1,0 +1,12 @@
+.fluid-container {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+input.button {
+  display: inline-block;
+}
+#url_check {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

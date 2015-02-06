@@ -1,0 +1,21 @@
+{% include 'urlcheck/header.html' %}
+{% include 'urlcheck/banner.html' %}
+  <div class="fluid-container">
+    <div class="row">
+      <form action="/results/" method="post" class="form-inline" accept-charset="utf-8">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-primary" value="Continue &rarr;">
+      </form>
+    </div>
+    <br>
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3><span class="label label-danger">Error: {{ errorcode }}</span> {{ error }}<br>
+          {% if url %}<small>{{ url }} didn't seem to work out for you.</small></h3>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% include 'urlcheck/footer.html' %}

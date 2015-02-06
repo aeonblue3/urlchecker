@@ -1,0 +1,15 @@
+{% include 'urlcheck/header.html' %}
+{% include 'urlcheck/banner.html' %}
+{% include 'urlcheck/form.html' %}
+  <br>
+  <div class="fluid-container">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p><span class="label {% if code > 499 %}label-danger{% elif code > 399 %}label-warning{% elif code > 299 %}label-info{% elif code > 199 %}label-success{% else %}label-default{% endif %}">{{ code }}</span> {{ code_object.name }} - <span class="url"><a href="{{ url }}" target="_BLANK" title="{{ url }}">{{ url }}</a></span></p>
+          <p>{{ code_object.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include 'urlcheck/footer.html' %}
